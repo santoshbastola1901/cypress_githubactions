@@ -5,9 +5,10 @@ describe("Bajra Login", () => {
     cy.get("#login").type(Cypress.env("validusername"));
     cy.get("#password").type(Cypress.env("validpassword"));
 
-    // Click login button
     cy.get('button[type="submit"]').click();
-    cy.contains("#Inbox");
+
+    // success assertion
+    cy.get("#Inbox", { timeout: 10000 }).should("be.visible");
   });
 
   it("verify invalid-bajra-login", () => {
@@ -16,9 +17,10 @@ describe("Bajra Login", () => {
     cy.get("#login").type(Cypress.env("invalidusername"));
     cy.get("#password").type(Cypress.env("invalidpassword"));
 
-    // Click login button
     cy.get('button[type="submit"]').click();
-    cy.contains("#Inbox");
+
+    // failure assertion
+    cy.contains("Invalid login").should("be.visible");
   });
 
   it("verify invalid-username-bajra-login", () => {
@@ -27,9 +29,9 @@ describe("Bajra Login", () => {
     cy.get("#login").type(Cypress.env("invalidusername"));
     cy.get("#password").type(Cypress.env("validpassword"));
 
-    // Click login button
     cy.get('button[type="submit"]').click();
-    cy.contains("#Inbox");
+
+    cy.contains("Invalid login").should("be.visible");
   });
 
   it("verify invalid-password-bajra-login", () => {
@@ -38,8 +40,8 @@ describe("Bajra Login", () => {
     cy.get("#login").type(Cypress.env("validusername"));
     cy.get("#password").type(Cypress.env("invalidpassword"));
 
-    // Click login button
     cy.get('button[type="submit"]').click();
-    cy.contains("#Inbox");
+
+    cy.contains("Invalid login").should("be.visible");
   });
 });
