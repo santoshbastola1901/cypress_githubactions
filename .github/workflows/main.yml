@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: [chrome, edge, firefox]
+        browser: [chrome, edge, firefox, edge]
 
     steps:
       - name: Checkout
