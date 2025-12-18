@@ -1,0 +1,24 @@
+{
+  "name": "cypress_githubactions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santoshbastola1901/cypress_githubactions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/santoshbastola1901/cypress_githubactions/issues"
+  },
+  "homepage": "https://github.com/santoshbastola1901/cypress_githubactions#readme",
+  "devDependencies": {
+    "cypress": "^15.8.0"
+  }
+}
