@@ -7,7 +7,7 @@ describe("Bajra Login", () => {
 
     cy.get('button[type="submit"]').click();
 
-    cy.get("#Inbox", { timeout: 10000 }).should("be.visible");
+    cy.contains("#Inbox");
   });
 
   it("verify invalid-bajra-login", () => {
