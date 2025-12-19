@@ -18,6 +18,6 @@ describe("Bajra Login", () => {
 
     cy.get('button[type="submit"]').click();
 
-    cy.contains(/invalid/i).should("be.visible");
+    cy.contains("#Inbox");
   });
 });
