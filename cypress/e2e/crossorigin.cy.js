@@ -9,7 +9,7 @@ describe("Cross origin demo", () => {
     cy.get("#password").type("test123");
     cy.contains("Username");
   });
-  it("Login with github without cy.origin()", () => {
+  it("Login with github with cy.origin()", () => {
     cy.visit("https://cloud.cypress.io/login");
 
     cy.get("button span").contains("Log in").first().click();
